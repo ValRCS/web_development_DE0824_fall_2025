@@ -22,6 +22,8 @@
         <li>HTML Lists</li>
         <li>Links</li>
         <li>Images</li>
+        <li>Audio</li>
+        <li>Embedded Videos, Maps and more</li>
         <li>Tables</li>
         <li>Forms</li>
     </ul>
@@ -86,6 +88,96 @@
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank">MDN Web Docs - &lt;img&gt; element</a></li>
             <li><a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">W3Schools - HTML Images</a></li>
         </ul>
+        <h3>Copyright Concerns</h3>
+        <p>When using images from the web, it's important to consider copyright issues. Always check the image's license and give proper attribution if required.</p>
+    </article>
+    <hr>
+    <article id="audio_article">
+        <h2>Audio</h2>
+        <p>Audio files can be embedded using the <code>&lt;audio&gt;</code> tag. Example:</p>
+        <audio controls>
+            <source src="audio/1-06_Lobachevsky.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p>From https://commons.wikimedia.org/wiki/File:1-06_Lobachevsky.mp3</p>
+        <h3>Attributes</h3>
+        <ul>
+            <li><code>controls</code>: Adds audio controls like play, pause, and volume</li>
+            <li><code>autoplay</code>: Starts playing the audio as soon as it is ready</li>
+            <li><code>loop</code>: Repeats the audio indefinitely</li>
+        </ul>
+        <h3>References</h3>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio" target="_blank">MDN Web Docs - &lt;audio&gt; element</a></li>
+            <li><a href="https://www.w3schools.com/tags/tag_audio.asp" target="_blank">W3Schools - HTML Audio</a></li>
+        </ul>
+    </article>
+    <hr>
+    <article id="video_article">
+        <h2>Embedded Videos, Maps and more</h2>
+        <p>Videos can be embedded using the <code>&lt;video&gt;</code> tag or via <code>&lt;iframe&gt;</code> for platforms like YouTube. Example:</p>
+        <h3>Using a local video file</h3>
+        <h3>Using &lt;video&gt; tag</h3>
+        <video width="600" controls>
+            <source src="video/Balenoj_apud_Rejkjaviko_4.webm" type="video/webm">
+            Your browser does not support the video element.
+        </video>
+        <h3>Using &lt;iframe&gt; for YouTube</h3>
+        <p>For serving most video content usually we use external services like YouTube. Example:</p>
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/i8gvSFuRHNs?si=5b04pQoCEpwS7uHL" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Size considerations</h3>
+        <p>When embedding videos, consider the size and aspect ratio to ensure it fits well within your webpage layout.</p>
+        <p>Video content takes a lot of bandwidth, so it's important to optimize video files for web use.</p>
+        <h3>References</h3>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" target="_blank">MDN Web Docs - &lt;video&gt; element</a></li>
+            <li><a href="https://www.w3schools.com/tags/tag_video.asp" target="_blank">W3Schools - HTML Video</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="_blank">MDN Web Docs - &lt;iframe&gt; element</a></li>
+            <li><a href="https://www.w3schools.com/tags/tag_iframe.asp" target="_blank">W3Schools - HTML Iframe</a></li>
+        </ul>
+        <h3>Copyright Concerns</h3>
+        <p>When using videos from the web, it's important to consider copyright issues. Always check the video's license and give proper attribution if required.</p>
+    
+    <h3>Embedding Maps</h3>
+    <p>Maps can be embedded using services like Google Maps or OpenStreetMap using embedded code provided by these services.</p>
+</article>
+    <hr>
+    <article id="table_article">
+        <h2>Tables</h2>
+        <p>Tables are created using the <code>&lt;table&gt;</code> tag along with related tags like <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code>. Example:</p>
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>Activity</th>
+                <th>Time</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>Math Class</td>
+                <td>9:00 AM - 10:30 AM</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Science Class</td>
+                <td>10:00 AM - 11:30 AM</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>History Class</td>
+                <td>1:00 PM - 2:30 PM</td>
+            </tr>
+        </table>
+        <h3>References</h3>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank">MDN Web Docs - &lt;table&gt; element</a></li>
+            <li><a href="https://www.w3schools.com/tags/tag_table.asp" target="_blank">W3Schools - HTML Tables</a></li>
+        </ul>
+        <h3>Styling Tables</h3>
+        <p>Tables can be styled using CSS to improve their appearance and readability.</p>
+        <p>In later lessons will learn about various CSS properties that can be applied to tables, such as <code>border</code>, <code>padding</code>, and <code>background-color</code>.</p>
+    </article>
+        
 
 </main>
     
