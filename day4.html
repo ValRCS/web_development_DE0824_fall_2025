@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS - Basics</title>
+    <!-- Linking to an external CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles/day4style.css">
+    <style>
+        /* Internal CSS 
+        We use selectors to "select" the HTML elements we want to style
+        Below we style all h2 elements
+        NOTE: It is not required to have link and style in the same file
+        We can use either or both
+        */
+        h2 {
+            color: orchid;
+            background-color: lightgray;
+        }
+    </style>
 </head>
 <body>
     <header id="header_id">
@@ -28,6 +42,41 @@
         <li>Text Styling</li>
         <li>Box Model</li>
     </ul>
+    <h2>What is CSS?</h2>
+    <p>CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML. 
+        CSS controls the layout of multiple web pages all at once.</p>
+    <h2>CSS Syntax</h2>
+    <p>CSS is made up of rules that tell the browser how to display elements. 
+        A CSS rule consists of a selector and a declaration block.</p>
+    <pre>selector {
+    property: value;
+    }</pre> 
+    <h2 style="color: rgb(173, 55, 223);">Including CSS in HTML</h2>
+    <p>There are three ways to include CSS in HTML:</p>
+    <ul>
+        <li>Inline CSS</li>
+        <li>Internal CSS</li>
+        <li>External CSS</li>
+    </ul>
+    <h3 style="color:blue;">Inline CSS</h3>
+    <p>Using the style attribute inside an HTML element.</p>
+    <pre>&lt;h1 style="color:blue;"&gt;This is a heading&lt;/h1&gt;</pre>
+    <h3>Internal CSS</h3>
+    <p>Using a &lt;style&gt; element in the &lt;head&gt; section.</p>
+    <pre>&lt;head&gt;
+    &lt;style&gt;
+        h1 {color:blue;}
+    &lt;/style&gt;
+&lt;/head&gt;</pre>
+    <h3>External CSS</h3>
+    <p>Linking to an external CSS file using the &lt;link&gt; element.</p>
+    <pre>&lt;head&gt;
+    &lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;
+    &lt;/head&gt;</pre>
+    <p>By linking to an external CSS file, you can keep your HTML and CSS separate,
+         making your code cleaner and easier to maintain.</p>
+         <p>We can apply the same stylesheets to multiple HTML files, 
+            ensuring a consistent look and feel across your website.</p>
     </main>
     <footer id="footer_id">
         <hr>
