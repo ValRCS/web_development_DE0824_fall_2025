@@ -34,3 +34,48 @@ body {
     border: 1px solid green;
     border-radius: 5px;
 }
+
+/* let's style our nav links in the footer */
+#footer_id nav a {
+    color: darkred;
+    text-decoration: none; /* removes the underline */
+    font-weight: bold;
+    margin: 0 10px; /* adds space left and right of each link */
+    /* a bit of round corners */
+    border: 1px solid darkred;
+    border-radius: 5px;
+    padding: 2px 5px; /* adds space inside the border */
+}
+
+/* now let's do something similar to the header */
+#header_id {
+    background-color: lightgray;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* we want header nav anchor to look similar but not exactly the same */
+#header_id nav a {
+    color: darkblue;
+    text-decoration: none; /* removes the underline */
+    font-weight: bold;
+    margin: 0 10px; /* adds space left and right of each link */
+    /* a bit of round corners */
+    border: 1px solid darkblue;
+    border-radius: 5px;
+    padding: 2px 5px; /* adds space inside the border */
+}
+
+/* let's style the conclusion paragraph a bit */
+#conclusion_p {
+    font-style: italic;
+    background-color: lightyellow;
+    border: 1px solid orange;
+    padding: 10px;
+    border-radius: 5px;
+    /* line spacing */
+    line-height: 2.5;
+    /* let's center the text */
+    text-align: center;
+}
