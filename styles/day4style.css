@@ -13,3 +13,24 @@ body {
     /* let's have whole page a nice light blue background color */
     background-color: rgb(173, 216, 230);
 }
+
+/* using # we can select an element by its id */
+#what-is-css {
+    color: darkblue;
+    background-color: lightgray;
+    border: 2px solid black;
+    padding: 10px;
+    /* margin adds space outside the border */
+    margin: 20px;
+}   
+
+/* let's apply some background color to all class "using-example" 
+"using-example" is just a random name I came up with
+*/
+/* let's round the corner a bit */
+.using-example {
+    background-color: lightgreen;
+    padding: 5px;
+    border: 1px solid green;
+    border-radius: 5px;
+}
