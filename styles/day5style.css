@@ -1,0 +1,8 @@
+/* let's have some basic styling for the body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* so above rule says: if Arial is not available, use Helvetica,
+       if neither is available, use any sans-serif font */
+    /* let's have whole page a nice light blue background color */
+    background-color: rgb(207, 229, 237);
+}
