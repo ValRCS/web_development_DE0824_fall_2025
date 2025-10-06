@@ -15,3 +15,30 @@ body {
     padding: 10px; /* space between content and border */
     margin: 10px;  /* space between border and other elements */
 }
+
+/* let's have less margin and padding for box2 class elements */
+.box2 {
+    border: 3px solid rgb(123, 25, 25);
+    border-radius: 5px;
+    background-color: rgb(241, 231, 231);
+    padding: 5px; /* space between content and border */
+    margin: 5px;  /* space between border and other elements */
+}
+
+/* let's have specific width and height for box3 class elements */
+.box3 {
+    width: 400px;
+    height: 100px;
+}
+
+/* let's have box4 take 50% of width and 50% of height of its parent */
+.box4 {
+    width: 50%;
+    height: 30px;
+}
+
+/* let's have a nice bold style for class note elements */
+.note {
+    font-weight: bold;
+    color: red;
+}

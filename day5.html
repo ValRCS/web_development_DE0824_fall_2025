@@ -17,7 +17,7 @@
             <a href="#footer_id">Footer</a>
         </nav>
     </header>
-    <main>
+<main>
     <h1>Day 5 - Box Model, basic positioning</h1>
     <p>Today we will learn about the Box Model and basic positioning techniques with CSS.</p>
     
@@ -48,7 +48,43 @@
     <div class="box box2">Box 2</div>
     <div class="box box3">Box 3</div>
     <div class="box box4">Box 4</div>
-
+    <hr>
+    <h2>Block elements versus Inline elements</h2>
+    <p>Block elements take up the full width available, and start on a new line. Examples of block elements include &lt;div&gt;, &lt;h1&gt; to &lt;h6&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;.</p>
+    <p>Inline elements only take up as much width as necessary, and do not start on a new line. Examples of inline elements include &lt;span&gt;, &lt;a&gt;, &lt;strong&gt;, &lt;em&gt;, and &lt;img&gt;.</p>
+    <hr>
+    <h3>Block elements</h3>
+    <p>Block elements can contain other block elements and inline elements. They start on a new line and take up the full width available. Examples of block elements include &lt;div&gt;, &lt;h1&gt; to &lt;h6&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;.</p>
+    <h4>Specifying width and height of block elements</h4>
+    <p>By default, block elements take up the full width of their container. However, you can specify a different width and height using CSS. For example:</p>
+    <pre>div {
+    width: 50%;
+    height: 100px;
+    }</pre>
+    <h3>Inline elements</h3>
+    <p>Inline elements do not start on a new line and only take up as much width as necessary. They can only contain other inline elements and text. Examples of inline elements include &lt;span&gt;, &lt;a&gt;, &lt;strong&gt;, &lt;em&gt;, and &lt;img&gt;.</p>
+    <h4>Inline Element examples</h4>
+    <p>This is an example of an inline element: <span style="color: blue; font-weight: bold;">This text is blue and bold.</span> The rest of the text continues on the same line.</p>
+    <p>Multiple spans: <span style="color: red;">This text is red.</span> <span style="color: green;">This text is green.</span></p>
+    <p>Another example with a link: <a href="https://www.rtu.lv" target="_blank">This is a link to RTU</a></p>
+    <p class="note">NOTE: You can not set width and height on inline elements!!!</p>
+    <hr>
+    <h3>Inline Block Elements</h3>
+    <p>Inline-block elements are similar to inline elements, but they can have a width and height set. They do not start on a new line, but they respect the width and height properties. You can create an inline-block element by setting the display property to inline-block in CSS. For example:</p>
+    <pre>span {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    background-color: lightgray;
+    }</pre>
+    <p>This is an example of an inline-block element: <span style="display: inline-block; width: 100px; height: 50px; background-color: lightgray; text-align: center; line-height: 50px;">Inline Block</span> The rest of the text continues on the same line.</p>
+    <h3>References on Block, Inline and Inline-Block elements</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements">MDN Web Docs: Block-level elements</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">MDN Web Docs: Inline elements</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">MDN Web Docs: CSS display property</a></li>
+    </ul>
+    <hr>
     </main>
     <footer id="footer_id">
         <hr>
