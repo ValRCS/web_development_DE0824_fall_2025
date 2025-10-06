@@ -42,3 +42,39 @@ body {
     font-weight: bold;
     color: red;
 }
+
+/* let's make class relative-box elements positioned relative */
+.relative-box {
+    position: relative;
+    left: 20px; /* move 20px to the right from normal position */
+    top: 10px;  /* move 10px down from normal position */
+    border: 2px dashed blue;
+    padding: 5px;
+    margin: 5px;
+    width: 50%;
+}
+
+/* let's make class absolute-box elements positioned absolute */
+.absolute-box {
+    position: absolute;
+    left: 300px; /* 300px from the left edge of the nearest positioned ancestor */
+    top: 200px;  /* 200px from the top edge of the nearest positioned ancestor */
+    border: 2px dashed green;
+    padding: 5px;
+    margin: 5px;
+    width: 50%;
+}
+
+/* let's make class fixed-box elements positioned fixed to the bottom right */
+.fixed-box {
+    position: fixed;
+    bottom: 20px; /* 20px from the bottom of the viewport */
+    right: 30px;  /* 30px from the right of the viewport */
+    border: 2px dashed purple;
+    padding: 5px;
+    margin: 5px;
+    background-color: lightyellow;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
