@@ -21,8 +21,17 @@ body {
     /* we also want the children to wrap to next line if they don't fit */
     display: flex;
     flex-wrap: wrap;
+    /* align items to the right */
+    /* justify-content: flex-end;  */
+    /* center items */
+    justify-content: center;
+    /* then we could use align-items to align items vertically */
+    align-items: center; 
+    /* so we centered items both horizontally and vertically */
 }
 
+/* we can make the children also flex containers */
+/* so that we can center the text inside the box */
 
 .box {
     border: 2px solid rgb(198, 18, 18);
@@ -32,6 +41,11 @@ body {
     margin: 10px 10px;
     width: 50px;
     height: 50px;
+    /* for centering text inside the box */
+    /* this is NOT required but it looks better */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* order of media queries matters! */
