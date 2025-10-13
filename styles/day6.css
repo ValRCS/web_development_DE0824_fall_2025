@@ -6,7 +6,16 @@ html {
     box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
+body {
+    background-color: rgb(240, 191, 191);
+    color: black;
+    padding: 20px;
+}
+
+/* order of media queries matters! */
+/* more specific queries should come after less specific ones */
+/* if we are using max-width, the smallest width should come last */
+/* @media (max-width: 768px) {
     body {
         background-color: orange;
     }   
@@ -17,4 +26,32 @@ html {
     body {
         background-color: lightblue;
     }   
+} */
+
+/* instead of max-width let's use min-width this is mobile first approach 
+where we keep the base styles for mobile and add styles for larger screens */
+@media (min-width: 600px) {
+    /* so these rules will apply to ALL screens larger than 600px */
+    /* unless overridden by a more specific media query */
+    body {
+        background-color: lightblue;
+        font-size: 1.2em; /* increase font size for better readability */
+        /* em is relative to the parent element font size */
+        /* default font size is 16px so 1.2em is 19.2px */
+    }   
+    h2 {
+        background-color: yellow;
+    }   
 }
+
+/* as we go to larger screens we can change also font size */
+@media (min-width: 768px) {
+    body {
+        background-color: orange;
+        font-size: 1.5em; /* increase font size for better readability */
+        /* 1.5em is 24px */
+    }   
+}
+
+/* we can keep adding more media queries for larger screens */
+/* https://en.wikipedia.org/wiki/List_of_common_display_resolutions */
