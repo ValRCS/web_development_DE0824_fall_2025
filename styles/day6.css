@@ -5,3 +5,16 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+    body {
+        background-color: orange;
+    }   
+}
+
+
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }   
+}
