@@ -1,0 +1,7 @@
+/* let's have some basic defaults first for whole html document */
+html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

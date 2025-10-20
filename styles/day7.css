@@ -1,0 +1,62 @@
+/* let's make our container class a grid container */
+.container {
+    border: 3px solid rgb(51, 123, 15);
+    padding: 5px;
+    display: grid;
+    /* define 4 equal columns */
+    grid-template-columns: repeat(4, 1fr);
+    /* let's make 3 rows of auto height */
+    grid-template-rows: auto auto auto;
+    /* gap between rows and columns */
+    gap: 10px;
+}
+
+/* let's style our children from boxy class a  bit */
+.boxy {
+    border: 2px solid rgb(18, 66, 198);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(200, 200, 255);
+}
+
+/* let's make box-1 span 2 columns */
+.box-1 {
+    grid-column: span 2;
+    background-color: rgb(150, 255, 178);
+    /* we also need to make width auto so that it can expand */
+    width: auto;
+}
+
+/* let's make box-3 span 3 rows */
+.box-3 {
+    grid-row: span 3;
+    background-color: rgb(255, 255, 150);
+    /* we also need to make height auto so that it can expand */
+    height: auto;
+}
+
+/* let's make box-6 span 3 columns */
+.box-6 {
+    grid-column: span 3;
+    background-color: rgb(255, 150, 178);
+    /* we also need to make width auto so that it can expand */
+    width: auto;
+}
+
+/* let's add some hover effect to boxy class */
+/* hover is so called pseudo-class */
+.boxy:hover {
+    background-color: rgb(255, 200, 200);
+    cursor: pointer;
+}
+
+/* let's make all paragraphs have background color lightgray when hovered */
+p:hover {
+    background-color: lightgray;
+}

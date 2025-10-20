@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 7 - CSS Grid, Pseudo Classes</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/day7.css">
 </head>
 <body>
-        <header id="header_id">
+    <header id="header_id">
         <nav>
             <a href="index.html">Home</a> |
             <a href="day6.html">Day 6 - CSS Flexbox</a> |
@@ -34,10 +36,45 @@
     text-align: center;
 }
     </code></pre>
+    <h3>CSS Grid in Action</h3>
+    <p>To use use Grid we will need to have a parent container
+        with the display property set to grid. Then we can define the number of columns
+        and rows using the grid-template-columns and grid-template-rows properties.</p>
+
+<div class="container">
+    <div class="boxy box-1">Box 1</div>
+    <div class="boxy box-2">Box 2</div>
+    <div class="boxy box-3">Box 3</div>
+    <div class="boxy box-4">Box 4</div>
+    <div class="boxy box-5">Box 5</div>
+    <div class="boxy box-6">Box 6</div>
+</div>
+
     <h3>CSS Grid Resources</h3>
     <ul>
         <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">A Complete Guide to Grid</a></li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">MDN Web Docs - CSS Grid Layout</a></li>
+    </ul>
+    <h2>CSS Pseudo Classes</h2>
+    <p>CSS Pseudo-classes are used to define a special state of an element. For example, you can use pseudo-classes to style an element when a user hovers over it or when a link has been visited.</p>
+    <h3>Common Pseudo-Classes</h3>  
+    <ul>
+        <li><code>:hover</code> - Applies when the user designates an element (with some pointing device), but does not activate it. For example, when the mouse pointer is over a button.</li>
+        <li><code>:focus</code> - Applies when an element has received focus, either from the user selecting it with the mouse or by navigating to it using the keyboard.</li>
+        <li><code>:nth-child(n)</code> - Matches elements based on their position in a group of siblings.</li>
+        <li><code>:first-child</code> - Matches an element that is the first child of its parent.</li>
+    </ul>
+    <h3>Pseudo-Class Example</h3>
+    <p>Here is an example of using the <code>:hover</code> pseudo-class to change the color of a link when the user hovers over it:</p>
+    <pre><code>
+a:hover {
+    color: red;
+}
+    </code></pre>
+    <h3>Pseudo-Class Resources</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">MDN Web Docs - Pseudo-classes</a></li>
+        <li><a href="https://css-tricks.com/pseudo-class-selectors/">CSS-Tricks - Pseudo-classes</a></li>
     </ul>
     <hr>
     <footer id="footer_id">
