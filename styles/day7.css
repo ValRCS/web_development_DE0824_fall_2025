@@ -60,3 +60,65 @@
 p:hover {
     background-color: lightgray;
 }
+
+/* let's have another grid container it is called container-2 */
+.container-2 {
+    border: 3px solid rgb(123, 15, 123);
+    padding: 5px;
+    display: grid;
+    /* define 3 columns: first column 100px, second column auto, third column 2fr */
+    grid-template-columns: 100px auto 2fr;
+    /* rows of auto height */
+    grid-template-rows: 100px 75px 100px;
+    gap: 10px;
+    /* define grid areas
+    We define named grid areas for better readability 
+    I can use single dot to represent empty area */
+
+    grid-template-areas:
+        "g-header g-header g-header"
+        "g-side g-main g-main"
+        ". g-footer g-footer";
+}
+
+/* let's add some border and background color to boxy-2 class which are children of container-2 */
+.boxy-2 {
+    border: 2px solid rgb(198, 123, 18);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 228, 196);
+}
+
+/* now we need to name the children of container-2 */
+/* I am using my- and g- to show that they are different from
+   previous examples
+   but we could have called them header, main, side, footer as well */ 
+.my-header {
+    grid-area: g-header;
+}
+.my-main {
+    grid-area: g-main;
+}
+.my-side {
+    grid-area: g-side;
+}
+.my-footer {
+    grid-area: g-footer;
+}
+
+/* we can use named grid areas in conjustion with media queries to change layout */
+/* let's use mobile first approach with min-width */
+@media (min-width: 600px) {
+    .container-2 {
+        background-color: aquamarine;
+        grid-template-areas:
+            "g-header g-header g-header"
+            "g-side g-main g-main"
+            "g-side g-main g-main"
+            "g-side g-footer g-footer";
+    }
+}

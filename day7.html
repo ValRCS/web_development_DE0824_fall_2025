@@ -20,6 +20,7 @@
         </nav>
     </header>
     <hr>
+    <main>
     <h1>Day 7 - CSS Grid, Pseudo Classes</h1>
     <h2>CSS Grid</h2>
     <p>CSS Grid is a powerful layout system available in CSS. It allows you to create complex web layouts easily and consistently across different screen sizes.</p>
@@ -51,6 +52,31 @@
 </div>
 
 <hr>
+<h3>Grid with named areas</h3>
+<p>We can also define named grid areas to make it easier to place items in specific locations within the grid.</p>
+<pre><code>
+.container-2 {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "main main side"
+        "footer footer footer";
+    gap: 10px;
+}
+.header {
+    grid-area: header;
+}
+.main {
+    grid-area: main;
+}
+.side {
+    grid-area: side;
+}
+.footer {
+    grid-area: footer;
+}
+    </code></pre>
+    <h3>Named Areas in Action</h3>
 <div class="container-2">
     <div class="boxy-2 my-header">Header Content</div>
     <div class="boxy-2 my-main">Main Content</div>
@@ -84,6 +110,7 @@ a:hover {
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">MDN Web Docs - Pseudo-classes</a></li>
         <li><a href="https://css-tricks.com/pseudo-class-selectors/">CSS-Tricks - Pseudo-classes</a></li>
     </ul>
+    </main>
     <hr>
     <footer id="footer_id">
         <nav>
