@@ -1,9 +1,29 @@
-        .box {
-            width: 100px;
-            height: 100px;
-            background-color: blue;
-            transition: background-color 0.5s ease;
-        }
-        .box:hover {
-            background-color: red;
-        }
+.box {
+    /* let's center text in elements of class box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.box-0 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    transition: transform 0.5s ease;
+}
+
+.box-0:hover {
+    transform: rotate(45deg);
+}
+
+.box-1 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: background-color 0.5s ease;
+
+}
+.box-1:hover {
+    background-color: red;
+}

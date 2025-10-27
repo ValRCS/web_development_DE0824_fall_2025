@@ -24,7 +24,30 @@
 
     <hr>
     <main>
-    <h1>Day 8 - Transition, Transformation, Animation - External Libraries</h1>
+    <h1>Day 8 - Transformation, Transition,  Animation - External Libraries</h1>
+    <h2>CSS Transformation</h2>
+    <p>CSS Transformations allow you to modify the coordinate space of the CSS visual formatting model. Using transformations, you can rotate, scale, skew, or translate an element.</p>
+    <h3>Basic Example of CSS Transformation</h3>
+    <pre><code>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+            transition: transform 0.5s ease;
+        }
+        .box:hover {
+            transform: rotate(45deg) scale(1.2);
+        }
+    </code>
+    </pre>
+    <div class="box box-0">Boxy 0</div>
+    <h3>CSS Transformation resources</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">MDN Web Docs - transform</a></li>
+        <li><a href="https://css-tricks.com/almanac/properties/t/transform/">CSS-Tricks - Transform</a></li>
+
+    </ul>
+    <hr>
     <h2>CSS Transitions</h2>
     <p>CSS Transitions allow you to change property values smoothly (over a given duration) from one state to another.</p>
     <h3>Basic Example of CSS Transition</h3>
@@ -40,7 +63,12 @@
         }
     </code>
     </pre>
-    <div class="box"></div>
+    <div class="box box-1">Boxy 1</div>
+    <h3>CSS Transition resources</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">MDN Web Docs - Using CSS transitions</a></li>
+        <li><a href="https://css-tricks.com/almanac/properties/t/transition/">CSS-Tricks - Transition</a></li>
+    </ul>
     </main>
     <footer id="footer_id">
         <hr>
