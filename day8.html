@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 8 - Transition, Transformation, Animation - External Libraries</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/day8.css">
 
@@ -114,6 +115,53 @@
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">MDN Web Docs - Using CSS animations</a></li>
         <li><a href="https://css-tricks.com/almanac/properties/a/animation/">CSS-Tricks - Animation</a></li>    
     </ul>
+    <hr>
+        <article>
+            <h2>CSS libraries</h2>
+        <p>There are many CSS libraries available that can help you quickly style your web pages. Some popular ones include:</p>
+        <h3>Core idea behind CSS libraries</h3>
+        <p>CSS libraries provide pre-written CSS code that you can include in your projects to achieve specific styles and layouts without having to write all the CSS from scratch. They often come with a set of predefined classes and components that you can use to build responsive and visually appealing web pages quickly.</p>
+        <h3>Popular CSS Libraries</h3>
+        <ul>
+            <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+            <li><a href="https://tailwindcss.com/">Tailwind CSS</a></li>
+            <li><a href="https://bulma.io/">Bulma</a></li>
+        </ul>
+        <h3>Specific CSS Libraries</h3>
+        <p>Here are some specific CSS libraries that focus on animations, hover effects, and normalization:</p>
+        <ul>
+            <li><a href="https://animate.style/">Animate.css</a> - A library for CSS animations.</li>
+            <li><a href="https://ianlunn.github.io/Hover/">Hover.css</a> - A collection of CSS3 powered hover effects.</li>
+            <li><a href="https://necolas.github.io/normalize.css/">Normalize.css</a> - A modern, HTML5-ready alternative to CSS resets.</li>
+        </ul>
+        <h3>Using external CSS libraries</h3>
+        <p>To use an external CSS library, you typically include a link to the library's CSS file in the <code>&lt;head&gt;</code> section of your HTML document. For example, to include Animate.css, you would add the following line:</p>
+        <pre><code>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/&gt;</code></pre>
+        <p>Then, you can apply the library's classes to your HTML elements to use its features. For example, to add a bounce animation from Animate.css to a div, you would do the following:</p>
+        <pre><code>&lt;div class="animate__animated animate__bounce"&gt;Bouncy Box&lt;/div&gt;</code></pre>
+        <p>If we want the box to keep bouncing then we can use the following code:</p>
+        <pre><code>&lt;div class="animate__animated animate__bounce animate__infinite"&gt;Bouncy Box&lt;/div&gt;</code></pre>
+        <div class="box animate__animated animate__bounce animate__infinite">Boxy 1</div>
+    
+        <h3>Bootstrap versus Tailwind approach</h3>
+        <p>Bootstrap provides a set of predefined components and styles that you can use directly, while Tailwind CSS offers utility-first classes that allow you to build custom designs by composing small, reusable classes. The choice between the two depends on your project's needs and your preferred workflow.</p>
+        <h4>Bootstrap example with usage</h4>
+        <p>First you include link to Boostrap in head section</p>
+        <pre><code>&lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"&gt;</code></pre>
+        <p>Then you can use Bootstrap classes in your HTML elements like this:</p>
+        <pre><code>&lt;button class="btn btn-primary"&gt;Bootstrap Button&lt;/button&gt;</code></pre>
+        <h4>Tailwind CSS example</h4>
+        <p>First you include link to Tailwind CSS in head section</p>
+        <pre><code>&lt;link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"&gt;</code></pre>
+        <p>Then you can use Tailwind CSS utility classes in your HTML elements like this:</p>
+        <pre><code>&lt;button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"&gt;Tailwind Button&lt;/button&gt;</code></pre>
+        <p>Notice the difference in approach between Bootstrap and Tailwind CSS. Bootstrap uses predefined classes for components, while Tailwind CSS encourages a utility-first approach, allowing for more customization and flexibility.</p>
+        <h3>Links to Resources comparing Bootstrap and Tailwind CSS</h3>
+        <ul>
+            <li><a href="https://daily.dev/blog/bootstrap-vs-tailwindcss">Bootstrap vs Tailwind CSS: Which One Should You Learn?</a></li>
+            
+        </ul>
+    </article>
     </main>
     <footer id="footer_id">
         <hr>
