@@ -69,6 +69,25 @@
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">MDN Web Docs - Using CSS transitions</a></li>
         <li><a href="https://css-tricks.com/almanac/properties/t/transition/">CSS-Tricks - Transition</a></li>
     </ul>
+    <h2>Combining Transitions and Transformations - using Box Shadows</h2>
+    <p>Here is an example that combines both transformations and transitions to create a hover effect that moves an element up and adds a shadow.</p>
+    <pre><code>
+        .box-2 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+        .box-2:hover {
+            transform: translateY(-10px);
+            box-shadow: 4px 8px 15px rgba(0,0,0,0.5);
+        }
+    </code>
+    </pre>
+    <div class="box box-2">Boxy 2</div>
+
+
     </main>
     <footer id="footer_id">
         <hr>
