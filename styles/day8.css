@@ -3,7 +3,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(218, 205, 205);
+    width: 75px;
+    height: 75px;
+    /* slight border */
+    border: 2px solid black;
+    margin: 10px;
+    font-weight: bold;
+    /* a bit or border radius to make it look better */
+    border-radius: 8px;
 }
 
 .box-0 {
@@ -39,3 +47,30 @@
     transform: translateY(-10px);
     box-shadow: 4px 8px 15px rgba(0,0,0,0.5);
 }
+
+/* so slideIn is my animation name it could be myAnimation etc */
+/* let's make the animation loop forever from right to left */
+/* we can define the keyframes for the animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(150%);
+        opacity: 0.1;
+    }
+
+    20% {
+        transform: translateX(-10%);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 0.9;
+    }
+}
+.box-3 {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    animation: 3s ease-in 1s infinite reverse both running slideIn;
+}
+

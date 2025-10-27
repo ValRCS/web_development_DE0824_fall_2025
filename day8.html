@@ -86,8 +86,34 @@
     </code>
     </pre>
     <div class="box box-2">Boxy 2</div>
-
-
+    <h2>CSS Animations</h2>
+    <p>CSS Animations make it possible to animate transitions from one CSS style configuration to another. Animations consist of two components: a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation's style, as well as possible intermediate waypoints.</p>
+    <h3>Basic Example of CSS Animation</h3>
+    <pre><code>
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .box-3 {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            animation: slideIn 1s ease forwards;
+        }
+    </code>
+    </pre>
+    <div class="box box-3">Boxy 3</div>
+    <h3>CSS Animation resources</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">MDN Web Docs - Using CSS animations</a></li>
+        <li><a href="https://css-tricks.com/almanac/properties/a/animation/">CSS-Tricks - Animation</a></li>    
+    </ul>
     </main>
     <footer id="footer_id">
         <hr>
