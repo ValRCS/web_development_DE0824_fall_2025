@@ -32,6 +32,9 @@ console.log("Added text to output_id element");
 //we want to append the results to output_id element
 const a = 10; //this data could be coming from user input or outside source
 const b = 4;
+//a and b are not very good names for variables but for demonstration purposes it's fine
+//why not? because they don't convey any meaning!
+//better name would be myAge, numberOfItems, totalPrice etc.
 const result = a + b;
 outputElement.textContent += `\nThe sum of ${a} and ${b} is ${result}.`;
 
