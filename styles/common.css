@@ -1,7 +1,11 @@
 /* let's have some basic defaults first for whole html document */
 html {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
     padding: 0;
     box-sizing: border-box;
+
 }

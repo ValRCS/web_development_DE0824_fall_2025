@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 9 - Javascript Basics</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <!-- Before defer this was not recommended because HTML was not fully ready -->
+    <script src="scripts/day9.js" defer></script>
 </head>
 <body>
         <header id="header_id">
@@ -23,7 +26,22 @@
     <h1>Day 9 - Javascript Basics</h1>
     <h2>Introduction to JavaScript</h2>
     <p>JavaScript is a versatile programming language commonly used for web development. It allows you to create dynamic and interactive web pages.</p>
-    </main>
+    <h2>Basic Syntax</h2>
+    <p>JavaScript syntax is similar to other programming languages. Here are some basic elements:</p>
+    <ul>
+        <li><strong>Variables:</strong> Used to store data. Example: <code>let x = 5;</code></li>
+        <li><strong>Functions:</strong> Blocks of code designed to perform a particular task. Example: <code>function greet() { console.log("Hello!"); }</code></li>
+        <li><strong>Events:</strong> Actions that occur in the browser, such as clicks or key presses. Example: <code>button.addEventListener("click", function() { alert("Button clicked!"); });</code></li>
+    </ul>
+    <h2>Including JavaScript in HTML</h2>
+    <p>You can include JavaScript in your HTML file using the <code>&lt;script&gt;</code> tag. You can either write JavaScript directly within the tag or link to an external JavaScript file.</p>
+    <h2>Basic Javascript Resources</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN Web Docs - JavaScript Guide</a></li>
+        <li><a href="https://www.w3schools.com/js/">W3Schools - JavaScript Tutorial</a></li>
+        <li><a href="https://javascript.info/">JavaScript.info - Modern JavaScript Tutorial</a></li>
+    </ul>
+</main>
         <footer id="footer_id">
         <hr>
         <p>&copy; 2025 <a href="https://www.rtu.edu">RTU</a> Digital  Humanities DE0824</p>
@@ -39,6 +57,10 @@
             <a href="#header_id">Top</a>
         </nav>
     </footer>
-    
+    <!-- <script>
+        console.log("Hello, welcome to Day 9 of Web Development!");
+    </script> -->
+<!--     this is the old school way of adding scripts before we had defer and async
+    <script src="scripts/day9.js"></script> -->
 </body>
 </html>
