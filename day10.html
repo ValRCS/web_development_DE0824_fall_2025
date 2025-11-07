@@ -82,6 +82,38 @@
         <li><a href="https://en.wikipedia.org/wiki/Boolean_algebra">Wikipedia - Boolean Algebra</a></li>
         <!-- <li><a href="https://www.khanacademy.org/computing/computer-science/cryptography/boolean-algebra/a/boolean-algebra-intro">Khan Academy - Boolean Algebra</a></li> -->
     </ul>
+<h2>Branching</h2>
+    <p>Branching allows you to execute different code paths based on certain conditions. In JavaScript, this is typically done using if-else statements.</p>
+    <p>It is like that poem by Robert Frost "The Road Not Taken" where he describes making choices and the paths we take in life. We can not take BOTH paths!</p>
+    <a href="https://www.poetryfoundation.org/poems/44272/the-road-not-taken">The Road Not Taken</a>
+    <h3>Examples:</h3>
+    <ul>
+        <li>if (condition) { // code to execute if condition is true }</li>
+        <li>else { // code to execute if condition is false }</li>
+    </ul>
+    <h3>Example code</h3>
+    <pre><code>
+console.log("We can also have if-else if-else structures, ORDER IS IMPORTANT!:");
+console.log("Again only one of the blocks will execute:");
+a = 15;
+b = 15;
+if (a > b) {
+    console.log("a is greater than b");
+    console.log(`a is ${a}, b is ${b}`); //FIXME this line is repeated in each block
+} else if (a === b) {
+    console.log("a is equal to b");
+    console.log(`a is ${a}, b is ${b}`);
+} else {
+    console.log("a is less than b");
+    console.log(`a is ${a}, b is ${b}`);
+}
+//TODO move the repeated line out of the blocks
+    </code></pre>
+    <h3>Resources on Branching</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement">MDN Web Docs - if...else statement</a></li>
+        <li><a href="https://javascript.info/ifelse">JavaScript.info - if...else</a></li>
+    </ul>
     </main>
             <footer id="footer_id">
         <hr>
