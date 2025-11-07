@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 10 - Javascript Comparison, Logical Operators, Branching</title>
     <link rel="stylesheet" href="styles/common.css">
+    <style>
+        .avoid {
+            color: red;
+        }
+    </style>
     <script src="scripts/day10.js" defer></script>
 </head>
 <body>
@@ -34,6 +39,48 @@
         <li>Less than: &lt;</li>
         <li>Greater than or equal to: &gt;=</li>
         <li>Less than or equal to: &lt;=</li>
+    </ul>
+    <p>In JavaScript, comparison operators are used to compare two values. The result of a comparison is a boolean value (true or false).</p>
+    <p>Javascript likes to coerce types when comparing values. Avoid using == and != for comparison.</p>
+    <h3>Examples:</h3>
+    <ul>
+        <li class="avoid">5 == '5' // true</li>
+        <li>5 === '5' // false</li>
+        <li class="avoid">5 != 4 // true</li>
+        <li>5 !== '5' // true</li>
+        <li>`5 & 4` // true</li>
+        <li>`5 &lt; 6` // true</li>
+        <li>`5 &gt;= 5` // true</li>
+        <li>`5 &lt;= 4` // false</li>
+    </ul>
+    <h3>Resources on Comparison Operators</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators">MDN Web Docs - Comparison Operators</a></li>
+        <li><a href="https://www.w3schools.com/js/js_comparisons.asp">W3Schools - JavaScript Comparisons</a></li>
+        <li><a href="https://javascript.info/comparison">JavaScript.info - Comparison</a></li>
+    </ul>
+    <h2>Logical Operators</h2>
+    <ul>
+        <li>Logical AND: &&</li>
+        <li>Logical OR: ||</li>
+        <li>Logical NOT: !</li>
+    </ul>
+    <p>Logical operators are used to combine multiple boolean expressions or values.</p>
+    <h3>Examples:</h3>
+    <ul>
+        <li>(5 &gt; 4) && (6 &gt; 5) // true</li>
+        <li>(5 &gt; 4) || (6 &lt; 5) // true</li>
+        <li>!(5 &gt; 4) // false</li>  
+    </ul>
+    <h3>Resources on Logical Operators</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#binary_logical_operators">MDN Web Docs - Logical Operators</a></li>
+        <li><a href="https://javascript.info/logical-operators">JavaScript.info - Logical Operators</a></li>
+    </ul>
+    <h3>Links Boolean Algebra</h3>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Boolean_algebra">Wikipedia - Boolean Algebra</a></li>
+        <!-- <li><a href="https://www.khanacademy.org/computing/computer-science/cryptography/boolean-algebra/a/boolean-algebra-intro">Khan Academy - Boolean Algebra</a></li> -->
     </ul>
     </main>
             <footer id="footer_id">
