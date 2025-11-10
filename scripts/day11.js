@@ -127,3 +127,27 @@ document.getElementById("yet_another_switch_example").textContent = seasonMessag
 
 //so downside of switch is that it checks for strict equality (===) so no type coercion
 //but if you need like a range of values then if..else is better suited
+
+//While loop example
+
+let count = 1;
+//let's get our div for showing while loop output
+let whileLoopDiv = document.getElementById("while_example");
+//while some condition is true we keep doing something
+while (count <= 5) {
+    console.log("While Loop Count: " + count);
+    //let's add to existing content in div 
+    //this is not the best way to build HTML but for illustration purposes it's fine
+    whileLoopDiv.innerHTML += "<p>While Loop Count: " + count + "</p>";
+    //there is a more efficient way to do this using document fragments but we will cover that later
+    count++; //CRUCIAL to increment to avoid infinite loop
+}
+
+//do while loop example
+let doCount = 25000; //let's start with high number to show do..while runs at least once
+let doWhileLoopDiv =document.getElementById("do_while_example");
+do {
+    console.log("For now: " + doCount);
+    doWhileLoopDiv.innerHTML += "<p>Current counter value for Do While loop: " + doCount + "</p>";
+    doCount++;
+} while (doCount <= 5);
