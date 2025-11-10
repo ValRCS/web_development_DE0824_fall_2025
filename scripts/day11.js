@@ -141,7 +141,8 @@ while (count <= 5) {
     whileLoopDiv.innerHTML += "<p>While Loop Count: " + count + "</p>";
     //there is a more efficient way to do this using document fragments but we will cover that later
     count++; //CRUCIAL to increment to avoid infinite loop
-}
+} //so ++ means count = count + 1 that increment by 1
+//if we need to increment by different value we can do count += 2 etc.
 
 //do while loop example
 let doCount = 25000; //let's start with high number to show do..while runs at least once
@@ -151,3 +152,45 @@ do {
     doWhileLoopDiv.innerHTML += "<p>Current counter value for Do While loop: " + doCount + "</p>";
     doCount++;
 } while (doCount <= 5);
+
+//for loop example
+let forLoopDiv = document.getElementById("for_example");
+//note how we define i inside the for loop!
+//generallly we start at 0 or 1 depending on use case
+//but you can start at any value depending on your needs
+for (let i = 100; i <= 102; i++) {
+    console.log("For Loop Count: " + i);
+    forLoopDiv.innerHTML += "<p>For Loop Count: " + i + "</p>";
+}
+
+//let's show break in a for loop
+let breakLoopDiv = document.getElementById("break_example");
+//let's reset contents of our breakLoopDiv
+breakLoopDiv.innerHTML = "";
+//we will loop from 1 to 10 but break when we reach 3
+for (let j = 1; j <= 10; j++) {
+    if (j === 3) { //generally this would be some extreme condition to stop early
+        console.log("Breaking the loop at j = " + j);
+        breakLoopDiv.innerHTML += "<p>Breaking the loop at j = " + j + "</p>";
+        break; //exit the loop entirely
+    }
+    console.log("Break Loop Count: " + j);
+    breakLoopDiv.innerHTML += "<p>Break Loop Count: " + j + "</p>";
+}
+
+//finally let's do continue example
+let continueLoopDiv = document.getElementById("continue_example");
+//let's reset contents of our continueLoopDiv
+continueLoopDiv.innerHTML = "";
+//we will loop from 0 to 4 but skip when we reach 2
+for (let k = 0; k < 5; k++) {
+    if (k === 2) {
+        console.log("Skipping the iteration at k = " + k);
+        continueLoopDiv.innerHTML += "<p>Skipping the iteration at k = " + k + "</p>";
+        continue; //skip to next iteration
+        //NOTE: careful with continue in a while loop as it can lead to infinite loops if not handled properly
+    }
+    console.log("Continue Loop Count: " + k);
+    continueLoopDiv.innerHTML += "<p>Continue Loop Count: " + k + "</p>";
+}
+//this concludes our day 11 examples on switch statements and loops
