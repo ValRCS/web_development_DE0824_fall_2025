@@ -127,9 +127,13 @@ function handleButtonClick() {
     //but for this simple example it is fine
     // eventOutputDiv.innerHTML += "<p>Button was clicked! Event handled by handleButtonClick function.</p>";
     //still a more proper way would be to create a new paragraph element and append it
-    const newParagraph = document.createElement("p");
-    newParagraph.textContent = "Button was clicked! Event handled by handleButtonClick function.";
-    eventOutputDiv.appendChild(newParagraph);
+    // const newParagraph = document.createElement("p");
+    // newParagraph.textContent = "Button was clicked! Event handled by handleButtonClick function.";
+    // eventOutputDiv.appendChild(newParagraph);
+    //let's add a list item to button_list using our previously defined function
+    //so again button_list should be an id for ol or ul element in the HTML
+    //why? because those can contain list items which is what we are adding
+    addListItem("button_list", "Button was clicked and handled!");
     
     //we could do more complex things here like updating DOM elements etc.
 }
