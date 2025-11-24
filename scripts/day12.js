@@ -142,3 +142,17 @@ document.getElementById("eventButton").addEventListener("click", handleButtonCli
 //so click is just one of many possible events
 //other common events include mouseover, mouseout, keydown, keyup, change etc.
 //we will cover more about events later in the course
+
+//so how about counting things like how many times a button was pressed?
+//for that we need to store some state outside the function
+let buttonClickCount = 0; //initialize counter variable here we do NEED a let because we will update it
+function handleCountedButtonClick() {
+    buttonClickCount++; //increment counter by 1
+    console.log("Counted Button was clicked! Total clicks: " + buttonClickCount);
+    const eventOutputDiv = document.getElementById("event_counter");
+    eventOutputDiv.innerText = `Button clicked ${buttonClickCount} times.`;
+}
+
+//now we can add ANOTHER event listener to this same button for counted clicks
+document.getElementById("eventButton").addEventListener("click", handleCountedButtonClick);
+//of course we could have added another button for this purpose as well
