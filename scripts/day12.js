@@ -160,3 +160,22 @@ function handleCountedButtonClick() {
 //now we can add ANOTHER event listener to this same button for counted clicks
 document.getElementById("eventButton").addEventListener("click", handleCountedButtonClick);
 //of course we could have added another button for this purpose as well
+
+//we want to change randomly whole document background color on each button click
+//first we have a helper random function
+function random(number) {
+  return Math.floor(Math.random() * (number + 1));
+}
+function changeBackgroundColor() {
+    const red = random(255);
+    const green = random(255);
+    const blue = random(255);
+    const bgColor = `rgb(${red}, ${green}, ${blue})`;
+    document.body.style.backgroundColor = bgColor;
+    console.log("Background color changed to: " + bgColor);
+}
+
+//so now let's attach it to change_color button
+document.getElementById("change_color").addEventListener("click", changeBackgroundColor);
+
+//this shows how functions help us organize code and handle events in a clean way
