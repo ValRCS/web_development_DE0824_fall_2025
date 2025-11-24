@@ -112,6 +112,12 @@ for (let i = 0; i < moreHealthyFoods.length; i++) {
     addListItem("function_ul", moreHealthyFoods[i]);
 }
 
+//quick mention of ` backticks for template literals
+//they allow embedding expressions inside string using ${expression} syntax
+const firstName = "Frank";
+const age = 30;
+console.log(`My name is ${firstName} and I am ${age} years old.`); // Output: My name is Frank and I am 30 years old.
+
 //so trend is to avoid explicit for loops when index is not needed
 //it is fine to use for loops when you need index or need to loop in reverse order etc.
 
