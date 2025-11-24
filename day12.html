@@ -61,6 +61,28 @@ console.log(greet("Alice")); // Output: Hello, Alice!
             <!-- List items will be added here by JavaScript -->
         </ul>
     </div>
+<hr>
+    <h2>DOM Events</h2>
+    <p>DOM (Document Object Model) events are actions or occurrences that happen in the browser, which can be detected and responded to using JavaScript. Common events include clicks, mouse movements, key presses, and form submissions.</p>
+    <h3>Example:</h3>
+    <p>Here is an example of how to handle a button click event:</p>
+    <pre>
+// HTML:
+&lt;button id="myButton"&gt;Click Me!&lt;/button&gt;
+// JavaScript:
+document.getElementById("myButton").addEventListener("click", function() { 
+    alert("Button was clicked!"); 
+});
+    </pre>
+    <h3>Resources on DOM Events</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Events">MDN Web Docs - DOM Events</a></li>
+        <li><a href="https://www.w3schools.com/js/js_events.asp">W3Schools - JavaScript Events</a></li>
+        <li><a href="https://javascript.info/events">JavaScript.info - Introduction to Events</a></li>
+    </ul>
+    <h3>Event Example</h3>
+    <button id="eventButton">Click Me!</button>
+    <div id="eventOutput">Event output will appear here.</div>
     </main>
 
     <footer id="footer_id">

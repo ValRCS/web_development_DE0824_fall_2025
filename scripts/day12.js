@@ -114,3 +114,31 @@ for (let i = 0; i < moreHealthyFoods.length; i++) {
 
 //so trend is to avoid explicit for loops when index is not needed
 //it is fine to use for loops when you need index or need to loop in reverse order etc.
+
+//so let's move onto handling basic DOM events using functions
+//we will define a function that will be called when button is clicked
+function handleButtonClick() {
+    // alert("Button was clicked!"); //simple alert to show button click was handled
+    console.log("Button was clicked!");
+    //let's add some text to eventOutput div to show button click was handled
+    const eventOutputDiv = document.getElementById("eventOutput");
+    //innerHTML is a bit dangerous if you are adding user input directly
+    //especially if that input can contain HTML or script tags
+    //but for this simple example it is fine
+    // eventOutputDiv.innerHTML += "<p>Button was clicked! Event handled by handleButtonClick function.</p>";
+    //still a more proper way would be to create a new paragraph element and append it
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "Button was clicked! Event handled by handleButtonClick function.";
+    eventOutputDiv.appendChild(newParagraph);
+    
+    //we could do more complex things here like updating DOM elements etc.
+}
+
+//so assuming we do have an element with ID eventButton we can add event listener to it
+document.getElementById("eventButton").addEventListener("click", handleButtonClick);
+//note handleButtonClick was not called with () because we are passing the function reference
+//we are passing a function just like any other variable
+//the browser will call this function when the click event happens
+//so click is just one of many possible events
+//other common events include mouseover, mouseout, keydown, keyup, change etc.
+//we will cover more about events later in the course
