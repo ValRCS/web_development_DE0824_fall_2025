@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Arrays, DOM Input Events</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <script src="scripts/day13.js" defer></script>
+</head>
+<body>
+                <header id="header_id">
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="day12.html">Day 12 - Functions, DOM Events</a> |
+            <a href="day11.html">Day 11 - Switch Statement, While and For Loops</a> |
+            <a href="day10.html">Day 10 - Javascript Comparison, Logical Operators, Branching</a> |
+            <a href="day9.html">Day 9 - Javascript Basics</a> |
+            <a href="day8.html">Day 8 - Transition, Transformation, Animation - External Libraries</a> |
+            <a href="day7.html">Day 7 - CSS Grid, Pseudo Classes</a> |
+            <a href="day6.html">Day 6 - CSS Flexbox</a> |
+            <a href="day5.html">Day 5 - CSS Box Model</a> |
+            <a href="day4.html">Day 4 - CSS Basics</a> |
+            <a href="day3.html">Day 3 - More HTML</a> |
+            <a href="day2.html">Day 2 - HTML Basics</a> |
+            <a href="#footer_id">Footer</a>
+        </nav>
+    </header>
+    <main>
+    <h1>Day 13 - Javascript Arrays, DOM Input Events</h1>
+    <h2>Arrays</h2>
+    <p>An array is a special variable that can hold more than one value at a time. It is used to store multiple values in a single variable, making it easier to manage and manipulate collections of data.</p>
+    <h3>Syntax:</h3>
+    <pre>
+let arrayName = [value1, value2, value3, ...];
+    </pre> 
+    <h3>Example:</h3>
+    <p>Here is a simple array that holds a list of fruits:</p>
+    <pre>
+let fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits[0]); // Output: Apple
+    </pre> 
+    <h3>Resources on Arrays</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">MDN Web Docs - Array</a></li>
+        <li><a href="https://www.w3schools.com/js/js_arrays.asp">W3Schools - JavaScript Arrays</a></li>
+        <li><a href="https://javascript.info/array">JavaScript.info - Arrays</a></li>
+    </ul>
+    <hr>
+    <h3>Array Output Here</h3>
+    <div id="array_example_div">If you see this Javascript did not run properly..</div>
+    <hr>
+    <h2>DOM Input Events</h2>
+    <p>DOM Input Events are events that occur when the user interacts with input elements on a web page, such as text fields, checkboxes, radio buttons, and dropdown menus. These events allow developers to respond to user actions and update the web page dynamically.</p>
+    <h3>Common Input Events:</h3>
+    <ul>
+        <li><strong>input:</strong> Triggered when the value of an input element changes.</li>
+        <li><strong>change:</strong> Triggered when the user commits a change to an input element (e.g., selecting a different option in a dropdown).</li>
+        <li><strong>focus:</strong> Triggered when an input element gains focus.</li>
+        <li><strong>blur:</strong> Triggered when an input element loses focus.</li>
+    </ul>
+    <h3>Example:</h3>
+    <p>Here is an example of using the input event to display the current value of a text field:</p>
+    <pre>
+&lt;input type="text" id="myInput" placeholder="Type something..."&gt;
+&lt;div id="output"&gt;&lt;/div&gt;
+    </pre>  
+</main>
+    <footer id="footer_id">
+        <hr>
+        <p>&copy; 2025 <a href="https://www.rtu.edu">RTU</a> Digital  Humanities DE0824</p>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="day12.html">Day 12 - Functions, DOM Events</a> |
+            <a href="day11.html">Day 11 - Switch Statement, While and For Loops</a> |
+            <a href="day10.html">Day 10 - Javascript Comparison, Logical Operators, Branching</a> |
+            <a href="day9.html">Day 9 - Javascript Basics</a> |
+            <a href="day8.html">Day 8 - Transition, Transformation, Animation - External Libraries</a> |
+            <a href="day7.html">Day 7 - CSS Grid, Pseudo Classes</a> |
+            <a href="day6.html">Day 6 - CSS Flexbox</a> |
+            <a href="day5.html">Day 5 - CSS Box Model</a> |
+            <a href="day4.html">Day 4 - CSS Basics</a> |
+            <a href="day3.html">Day 3 - More HTML</a> |
+            <a href="day2.html">Day 2 - HTML Basics</a> |
+            <a href="#header_id">Top</a>
+        </nav>
+        <p id="footer_text"></p>
+    </footer>
+</body>
+</html>
