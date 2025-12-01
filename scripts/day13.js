@@ -100,6 +100,30 @@ for (let i = 0; i < fruits.length; i++) {
     }
 } 
 
+//let's make a function that adds a fruit to the array and the DOM list
+//it also uses odd or even class based on current length of the array
+//it will have following parameters:
+// item - the fruit name to add
+// fruitArray - the array to add the fruit to
+// domId - the id of the ul or ol element in the DOM
+function addFruit(item, fruitArray, domId) {
+    fruitArray.push(item);
+    console.log("Added new fruit: " + item);
+    const listElement = document.getElementById(domId);
+    if (listElement) {
+        const listItem = document.createElement("li");
+        listItem.textContent = item;
+        if ((fruitArray.length - 1) % 2 === 0) {
+            listItem.classList.add("even");
+        } else {
+            listItem.classList.add("odd");
+        }
+        listElement.appendChild(listItem);
+    } else {
+        console.log("List element with ID " + domId + " not found.");
+    }
+}
+
 //so we have an input with id item_input where we can enter a new fruit
 const itemInput = document.getElementById("item_input");
 if (itemInput) {
@@ -108,15 +132,21 @@ if (itemInput) {
         //check if the key pressed is Enter
         if (event.key === "Enter") {
             const newItem = itemInput.value.trim();
+            itemInput.value = "";
             if (newItem !== "") {
-                //add to fruits array   
-                fruits.push(newItem);
-                console.log("Added new fruit: " + newItem);
-                //add to the list in DOM
-                addFruitToList("fruits_list", newItem);
-                //clear the input field
-                itemInput.value = "";
+                //add to fruits array and DOM list
+                addFruit(newItem, fruits, "fruits_list");
             }
+            //old way without shared function
+            // if (newItem !== "") {
+            //     //add to fruits array   
+            //     fruits.push(newItem);
+            //     console.log("Added new fruit: " + newItem);
+            //     //add to the list in DOM
+            //     addFruitToList("fruits_list", newItem);
+            //     //clear the input field
+                
+            // }
         };
     });
 }
@@ -126,14 +156,16 @@ const addItemButton = document.getElementById("add_item_button");
 if (addItemButton) {
     addItemButton.addEventListener("click", function() {
         const newItem = itemInput.value.trim();
+        itemInput.value = "";
         if (newItem !== "") {
-            //add to fruits array   
-            fruits.push(newItem);
-            console.log("Added new fruit: " + newItem);
-            //add to the list in DOM
-            addFruitToList("fruits_list", newItem);
-            //clear the input field
-            itemInput.value = "";
+            //old way without shared function
+            // //add to fruits array   
+            // fruits.push(newItem);
+            // console.log("Added new fruit: " + newItem);
+            // //add to the list in DOM
+            // addFruitToList("fruits_list", newItem);
+            // //clear the input field
+            addFruit(newItem, fruits, "fruits_list");
         }
     });
 }
@@ -177,3 +209,7 @@ if (clearEverythingButton) {
         }
     });
 }
+
+//TODO make functions for delete and clear everything to avoid code duplication
+//this would be important if I had other ways of deleting items or clearing the list
+//then I could just call those functions from multiple places

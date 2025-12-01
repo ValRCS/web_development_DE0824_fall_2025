@@ -1,7 +1,9 @@
 /* let's add colors for odd and even classes */
 .odd {
-    background-color: rgb(200, 200, 255);
+    background-color: rgb(219, 237, 244);
+    /* you can add whatever styles you want here */
 }
 .even {
-    background-color: rgb(200, 255, 200);
+    background-color: rgb(234, 244, 219);
+    /* you can add whatever styles you want here */
 }
