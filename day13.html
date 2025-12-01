@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Arrays, DOM Input Events</title>
     <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/day13.css">
     <script src="scripts/day13.js" defer></script>
 </head>
 <body>
@@ -47,7 +48,20 @@ console.log(fruits[0]); // Output: Apple
     </ul>
     <hr>
     <h3>Array Output Here</h3>
-    <div id="array_example_div">If you see this Javascript did not run properly..</div>
+    <div id="array_example_div">You should see something below...
+        <ul id="fruits_list">
+
+        </ul>
+
+    </div>
+    <hr>
+    <div class="input-container">
+        <label for="item_input">Add item to array:</label>
+        <input type="text" id="item_input" placeholder="Type an item and press Enter">
+        <button id="add_item_button">Add Item</button>
+        <button id="delete_last_button">Delete Last</button>
+        <button id="clear_everything">Clear Everything</button>
+    </div>
     <hr>
     <h2>DOM Input Events</h2>
     <p>DOM Input Events are events that occur when the user interacts with input elements on a web page, such as text fields, checkboxes, radio buttons, and dropdown menus. These events allow developers to respond to user actions and update the web page dynamically.</p>

@@ -3,6 +3,8 @@ console.log("Day 13 - Javascript Arrays, DOM Input Events");
 
 //I could have made it constant but let's show that arrays can be modified
 let fruits = ["Apple", "Banana", "Cherry"];
+//so fruits will be our global array of fruit names
+//part of so called global state of the application
 
 //first how many items in the array?
 console.log("Number of fruits: " + fruits.length); // Output: Number of fruits: 3
@@ -51,4 +53,127 @@ console.log("Fruits in the array (using for...of loop):");
 for (const fruit of fruits) {
     console.log(fruit);
     //again we can do more stuff here if needed
+}
+
+//let's pop the last item from the array
+const lastFruit = fruits.pop(); //removes and returns the last item
+console.log("Popped last fruit: " + lastFruit);
+console.log("Fruits after popping last item:");
+fruits.forEach(fruit => console.log(fruit));
+//let's get rid of elderberry from the start
+const firstFruit = fruits.shift(); //removes and returns the first item
+console.log("Removed first fruit: " + firstFruit);
+console.log("Fruits after removing first item:");
+fruits.forEach(fruit => console.log(fruit));
+
+//let's make a function that given a dom id for ul or ol will add a fruit
+function addFruitToList(domId, fruit) {
+    const listElement = document.getElementById(domId);
+    if (listElement) {
+        const listItem = document.createElement("li");
+        listItem.textContent = fruit;
+        listElement.appendChild(listItem);
+    } else {
+        console.log("List element with ID " + domId + " not found.");
+    }
+}
+
+//let's add all fruits to our list in the DOM
+// fruits.forEach(fruit => addFruitToList("fruits_list", fruit));
+
+//this shows how arrays help us manage collections of data easily!
+
+//let's also add odd or even class to each list item based on index
+for (let i = 0; i < fruits.length; i++) {
+    const listElement = document.getElementById("fruits_list");
+    if (listElement) {
+        const listItem = document.createElement("li");
+        listItem.textContent = fruits[i];
+        if (i % 2 === 0) {
+            listItem.classList.add("even");
+        } else {
+            listItem.classList.add("odd");
+        }
+        listElement.appendChild(listItem);
+    } else {
+        console.log("List element with ID fruits_list not found.");
+    }
+} 
+
+//so we have an input with id item_input where we can enter a new fruit
+const itemInput = document.getElementById("item_input");
+if (itemInput) {
+    //we listen for keydown event
+    itemInput.addEventListener("keydown", function(event) {
+        //check if the key pressed is Enter
+        if (event.key === "Enter") {
+            const newItem = itemInput.value.trim();
+            if (newItem !== "") {
+                //add to fruits array   
+                fruits.push(newItem);
+                console.log("Added new fruit: " + newItem);
+                //add to the list in DOM
+                addFruitToList("fruits_list", newItem);
+                //clear the input field
+                itemInput.value = "";
+            }
+        };
+    });
+}
+
+//add_item_button to add item on button click
+const addItemButton = document.getElementById("add_item_button");
+if (addItemButton) {
+    addItemButton.addEventListener("click", function() {
+        const newItem = itemInput.value.trim();
+        if (newItem !== "") {
+            //add to fruits array   
+            fruits.push(newItem);
+            console.log("Added new fruit: " + newItem);
+            //add to the list in DOM
+            addFruitToList("fruits_list", newItem);
+            //clear the input field
+            itemInput.value = "";
+        }
+    });
+}
+
+//now let's handle delete_last_button to remove last item
+const deleteLastButton = document.getElementById("delete_last_button");
+if (deleteLastButton) {
+    deleteLastButton.addEventListener("click", function() {
+        if (fruits.length > 0) {
+            const removedItem = fruits.pop();
+            console.log("Removed last fruit: " + removedItem);
+            //also remove from the DOM list
+            const listElement = document.getElementById("fruits_list");
+            if (listElement && listElement.lastChild) {
+                listElement.removeChild(listElement.lastChild);
+            } else {
+                console.log("No items to remove from the list in DOM.");
+            }
+        } else {
+            console.log("No fruits to remove.");
+        }
+    });
+}
+
+//let's add clear_everything button functionality
+const clearEverythingButton = document.getElementById("clear_everything");
+if (clearEverythingButton) {
+    clearEverythingButton.addEventListener("click", function() {
+        //clear the fruits array
+        fruits = []; //we overwrite with a new empty array
+        console.log("Cleared all fruits.");
+        //clear the list in the DOM
+        const listElement = document.getElementById("fruits_list");
+        if (listElement) {
+            //while there is a first child we remove it
+            while (listElement.firstChild) {
+                listElement.removeChild(listElement.firstChild);
+            }
+        } else {
+            console.log("List element with ID fruits_list not found.");
+        }
+    });
 }

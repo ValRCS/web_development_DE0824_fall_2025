@@ -1,0 +1,7 @@
+/* let's add colors for odd and even classes */
+.odd {
+    background-color: rgb(200, 200, 255);
+}
+.even {
+    background-color: rgb(200, 255, 200);
+}
