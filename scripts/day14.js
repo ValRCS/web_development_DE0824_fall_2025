@@ -222,11 +222,12 @@ function addCar(make, model, year, color) {
         deleteButton.style.marginLeft = "10px";
         li.appendChild(deleteButton);
         //add event listener to delete button
-        deleteButton.addEventListener("click", () => {
+        deleteButton.addEventListener("click", (event) => {
 
             //we do this so delete button which is child of car list item does not trigger color change or any other parent event
-            //remove car from array
-            //this is where you can go wrong with indexes if not careful
+            event.stopPropagation();
+
+            //remove car from cars array
             const index = cars.indexOf(car); //find which index this car is at
             if (index > -1) {
                 cars.splice(index, 1); //splice removes a specific index
@@ -235,13 +236,6 @@ function addCar(make, model, year, color) {
             //remove li from DOM
             li.remove();
 
-
-            //we do not want the event to bubble up to li click event so we stop propagation
-            //how do we stop propagation without event object?
-
-            //https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation
-
-            //one way to solve it of course would be to make the delete button a sibling of li not a child!
         });
     }
 }
