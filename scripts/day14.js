@@ -64,3 +64,16 @@ console.log("Street is at person.address.street: " + person.address.street);
 let addrKey = "address";
 let streetKey = "street";
 console.log("Street using variable keys: " + person[addrKey][streetKey]);
+
+//how about looping through all key value pairs in an object?
+console.log("Looping through all key-value pairs in person object:");
+//NOTE how for objects we use for...in loop NOT for...of loop !!!
+for (const key in person) {
+    //so for each key in our object we print key and value
+    //hasOwnProperty check is good practice to avoid inherited properties - not strictly needed here
+    if (person.hasOwnProperty(key)) {
+        console.log(key + ": " + person[key]);
+        //TODO pretty print also values that are objects currently [object Object] is printed
+        //you could add an if that checks if value is object and then loop through its keys as well
+    }
+}
