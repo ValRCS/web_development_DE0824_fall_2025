@@ -179,66 +179,56 @@ let cars = [];
 
 //function to add car to array and DOM list
 function addCar(make, model, year, color) {
-    const car = {
-        make: make,
-        model: model,
-        year: year,
-        color: color
-    };
-    cars.push(car); //add to car array in memory
-    console.log("Added new car: ", car);
-    //also add to DOM list
+    const car = { make, model, year, color };
+    cars.push(car);
+
     const carList = document.getElementById("car_list");
-    if (carList) {
-        const li = document.createElement("li");
-        li.textContent = `${car.make} ${car.model} (${car.year}) - Color: ${car.color}`;
-        carList.appendChild(li);
-        //here we calculate the index of the car we just added
-        const carIndex = cars.length - 1;
-        //then add odd or even class based on index
-        if (carIndex % 2 === 0) {
-            li.classList.add("even");
-            console.log("Added even class to car list item.");
-        } else {
-            li.classList.add("odd");
-            console.log("Added odd class to car list item.");
+    if (!carList) return;
+
+    const li = document.createElement("li");
+
+    // Create a dedicated text span (avoids firstChild issues)
+    const carText = document.createElement("span");
+    carText.classList.add("car-text");
+    carText.textContent = `${car.make} ${car.model} (${car.year}) — Color: ${car.color}`;
+    li.appendChild(carText);
+
+    // Add odd/even class
+    const carIndex = cars.length - 1;
+    li.classList.add(carIndex % 2 === 0 ? "even" : "odd");
+
+    // Click on LI to edit color
+    li.addEventListener("click", () => {
+        const newColor = prompt("Enter new color:", car.color);
+        if (newColor && newColor.trim() !== "") {
+            car.color = newColor.trim();
+            carText.textContent = `${car.make} ${car.model} (${car.year}) — Color: ${car.color}`;
+            console.log("Updated car color:", car.color);
         }
-        //HINT this above type of approach can be used in your project 3 as well.
-        //here we want to add an event listener to each car list item so that when clicked it changes color
-        li.addEventListener("click", () => {
-            //on click we prompt user for new color
-            const newColor = prompt("Enter new color for the car:", car.color);
-            if (newColor && newColor.trim() !== "") {
-                car.color = newColor.trim(); //update color in object
-                //we want to keep any child elements like delete button so we update only text content part
-                li.firstChild.textContent = `${car.make} ${car.model} (${car.year}) - Color: ${car.color}`; //update DOM text
-                console.log("Updated car color to: " + car.color);
-            }
-        });
+    });
 
-        //let's add Delete me button to each car list item
-        const deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete me";
-        deleteButton.style.marginLeft = "10px";
-        li.appendChild(deleteButton);
-        //add event listener to delete button
-        deleteButton.addEventListener("click", (event) => {
+    // Create delete button (with proper event propagation control)
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.classList.add("delete-btn");
+    deleteButton.style.marginLeft = "12px";
+    li.appendChild(deleteButton);
 
-            //we do this so delete button which is child of car list item does not trigger color change or any other parent event
-            event.stopPropagation();
+    deleteButton.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevents LI click event
 
-            //remove car from cars array
-            const index = cars.indexOf(car); //find which index this car is at
-            if (index > -1) {
-                cars.splice(index, 1); //splice removes a specific index
-                console.log("Deleted car: ", car);
-            }
-            //remove li from DOM
-            li.remove();
+        const index = cars.indexOf(car);
+        if (index > -1) {
+            cars.splice(index, 1);
+        }
 
-        });
-    }
+        li.remove();
+        console.log("Car deleted:", car);
+    });
+
+    carList.appendChild(li);
 }
+
 
 //now we can use the addCar function when user clicks add_car_button
 const addCarButton = document.getElementById("add_car_button");
